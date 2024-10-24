@@ -45,6 +45,7 @@ public class TixIDTest {
         driver.findElement(By.id("id.tix.android:id/et_input")).sendKeys("venom");
         MobileElement searchFirst = (MobileElement) driver.findElement(By.id(("id.tix.android:id/tv_search_first")));
         searchFirst.click();
+        delay(3);
         String getTitleMovie = driver.findElement(By.id("id.tix.android:id/tv_title_of_movie")).getText();
         Assert.assertTrue(getTitleMovie.contains("VENOM"));
     }
